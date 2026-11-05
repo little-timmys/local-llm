@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather — NOAA Data</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Weather</h1>
+    <p class="subtitle">Data from NOAA National Weather Service</p>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="city-input" placeholder="Enter city name…" autocomplete="off">
+    <button id="search-btn" title="Search">Search</button>
+    <button id="geo-btn" title="Use my location">📍 Location</button>
+  </div>
+
+  <div id="error-msg" class="error hidden"></div>
+
+  <main id="weather-card" class="card hidden">
+    <section class="current">
+      <div class="temp-group">
+        <span class="icon" id="current-icon"></span>
+        <h2 id="temperature">—</h2>
+        <span class="unit">°F</span>
+      </div>
+      <p class="condition" id="condition">—</p>
+      <p class="location" id="location"></p>
+      <div class="details">
+        <div class="detail"><span class="label">Wind</span><span class="value" id="wind">—</span></div>
+        <div class="detail"><span class="label">Humidity</span><span class="value" id="humidity">—</span></div>
+        <div class="detail"><span class="label">Pressure</span><span class="value" id="pressure">—</span></div>
+        <div class="detail"><span class="label">Visibility</span><span class="value" id="visibility">—</span></div>
+      </div>
+    </section>
+
+    <section class="forecast-section">
+      <h3>7-Day Forecast</h3>
+      <div class="forecast" id="forecast"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://api.weather.gov/" target="_blank" rel="noopener">NOAA API ↗</a>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
